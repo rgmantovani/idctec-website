@@ -1,0 +1,120 @@
+.footer {
+  background-color: #0e2a47;
+  color: #ffffff;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.backToTop {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.backToTop:hover {
+  text-decoration: underline;
+}
+
+.partnership {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.partnership h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.emailForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.input::placeholder {
+  color: #cfcfcf;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0078d4;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.links li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.links li:hover {
+  text-decoration: underline;
+}
+
+.social {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.icons i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.icons i:hover {
+  color: #0078d4;
+}
+
+.footer span {
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+}
