@@ -1,3 +1,17 @@
+# Para executar o projeto
+
+No diretório do projeto, você pode executar:
+
+### `npm install`
+Instala as dependências do projeto e baixa o diretório node_modules.
+
+### `npm start`
+Executa o app no modo de desenvolvimento.
+Abra http://localhost:3000 para visualizá-lo no seu navegador.
+
+A página será recarregada sempre que você fizer alterações.
+Você também poderá ver qualquer erro de lint no console.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
