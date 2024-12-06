@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import PartnersPage from "./pages/PartnersPage/PartnersPage"; 
 import CoursesPage from "./pages/CoursesPage/CoursesPage"; 
 
+
 import "./index.css"; 
 
 function App() {

@@ -1,0 +1,71 @@
+/* Contêiner principal para os cursos */
+.courses-container {
+  display: flex;
+  flex-direction: column; /* Exibe os cursos um embaixo do outro */
+  align-items: center; /* Centraliza os cursos horizontalmente */
+  gap: 20px; /* Espaçamento entre os cursos */
+  margin-top: 80px; /* Margem superior para afastar da navbar */
+  padding: 20px;
+}
+
+/* Cartão de cada curso */
+.course-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 80%; /* Controla o tamanho do cartão */
+  max-width: 500px; /* Limita o tamanho máximo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para a imagem do curso */
+.course-image {
+  height: 180px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-icon {
+  font-size: 50px;
+}
+
+/* Informações do curso */
+.course-info {
+  padding: 15px 0;
+}
+
+.course-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.course-description {
+  color: #777;
+  margin: 10px 0;
+}
+
+.course-author {
+  font-size: 14px;
+  color: #555;
+}
+
+.course-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+}

@@ -36,14 +36,6 @@ const Footer = () => {
                     </button>
                 </form>
             </div>
-            <div className={styles.links}>
-                <ul>
-                    <li>Página Inicial</li>
-                    <li>Cursos</li>
-                    <li>Quem Somos / Sobre</li>
-                    <li>Parcerias</li>
-                </ul>
-            </div>
             <div className={styles.social}>
                 <div className={styles.icons}>
                     <i className="fab fa-facebook"></i>

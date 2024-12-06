@@ -1,111 +1,172 @@
+/* Geral da Navbar */
 .nav-container {
-    background-color: #1E3A8A; /* Azul */
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-content {
-    display: flex;
-    justify-content: space-between; /* Logo à esquerda e menu à direita */
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-  }
-  
-  
-  .nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: left;
-    flex-basis: 200px; /* Largura fixa */
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: #1e3a8a; /* Cor de fundo */
+  color: white;
+  padding: 15px 20px; /* Maior espaçamento para melhorar o visual */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte para maior profundidade */
+  transition: background-color 0.3s ease; /* Transição suave de fundo */
+}
 
-  .nav-toggle {
+.nav-container:hover {
+  background-color: #1e3a8a; /* Cor de fundo suavemente escurecida ao passar o mouse */
+}
+
+/* Container da Navbar */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.75rem; /* Logo maior */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-logo .highlight {
+  color: #ff9800; /* Cor de destaque no logo */
+}
+
+.nav-logo:hover {
+  color: #ff4081; /* Mudança de cor ao passar o mouse */
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 25px; /* Aumento do espaço entre os links */
+  list-style: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 15px; /* Mais espaçamento nos links */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4081; /* Cor vibrante ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px; /* Arredondamento maior nos links */
+}
+
+/* Botão de hambúrguer */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Para permitir o posicionamento do X dentro do botão */
+}
+
+.nav-icon {
+  width: 30px; /* Ícone maior */
+  height: 4px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  width: 30px; /* Aumentando o tamanho */
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-icon::before {
+  top: -8px;
+}
+
+.nav-icon::after {
+  top: 8px;
+}
+
+/* Quando o menu está aberto, transforma as barras em um X */
+.nav-icon.open {
+  background-color: transparent;
+}
+
+.nav-icon.open::before {
+  transform: rotate(45deg); /* Rotaciona a barra superior */
+  top: 0;
+}
+
+.nav-icon.open::after {
+  transform: rotate(-45deg); /* Rotaciona a barra inferior */
+  top: 0;
+}
+
+/* Responsivo: Menu de Hambúrguer */
+@media (max-width: 768px) {
+  .nav-links {
     display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .nav-icon {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    position: relative;
-  }
-  
-  .nav-icon::before,
-  .nav-icon::after {
-    content: "";
-    width: 25px;
-    height: 2px;
-    background-color: white;
+    flex-direction: column;
+    background-color: #1e3a8a;
     position: absolute;
-    left: 0;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
-  .nav-icon::before {
-    top: -8px;
-  }
-  
-  .nav-icon::after {
-    top: 8px;
-  }
-  
+
   .nav-links.open {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
-  
 
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      width: 100%;
-      padding: 0;
-    }
-  
-    .nav-toggle {
-      display: block;
-    }
-  
-  
-    .nav-links.open {
-      display: flex;
-      background-color: #1E3A8A; 
-      position: absolute;
-      top: 80px; 
-      right: 0;
-      left: 0;
-      z-index: 999;
-      text-align: center;
-      padding: 20px 0;
-    }
+  .nav-toggle {
+    display: block;
   }
-  
+
+  .nav-icon {
+    width: 25px; /* Ícone do hambúrguer menor */
+    height: 3px;
+  }
+
+  .nav-icon::before,
+  .nav-icon::after {
+    width: 25px; /* Ícones menores */
+    height: 3px;
+  }
+
+  /* Ajustes no Menu de Hambúrguer */
+  .nav-links {
+    width: 80%; /* Reduzindo a largura do menu */
+    margin: 0 auto; /* Centralizando o menu */
+    padding-top: 20px; /* Ajustando o espaçamento superior */
+  }
+
+  .nav-links a {
+    font-size: 1rem; /* Tamanho de fonte ajustado para o menu no hambúrguer */
+    padding: 12px 20px; /* Maior padding para tornar os itens mais fáceis de clicar */
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Maior destaque ao passar o mouse */
+    border-radius: 8px; /* Border-radius para links */
+  }
+}
