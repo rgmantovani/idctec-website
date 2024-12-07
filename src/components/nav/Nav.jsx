@@ -1,40 +1,66 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Usando o Link para navegação
-import './Nav.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
+import sunIcon from '../assets/sun-icon.png';
+import moonIcon from '../assets/moon-icon.png';
+
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Controle do menu hambúrguer
+  const [isDarkMode, setIsDarkMode] = useState(false); // Controle do tema
 
-  // Função para alternar o estado do menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Função para fechar o menu
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  // Alternar o tema
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  // Atualizar a classe do body conforme o estado de dark mode
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
 
   return (
     <header className="nav-container">
       <nav className="nav-content">
-        {/* Logo à esquerda */}
+        {/* Logo */}
         <div className="nav-logo">IDCTEC</div>
 
-        {/* Menu de navegação à direita */}
-        <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <li><Link to="/" onClick={closeMenu}>Página Inicial</Link></li>
-          <li><Link to="/courses" onClick={closeMenu}>Cursos</Link></li>
-          <li><Link to="/about" onClick={closeMenu}>Quem Somos</Link></li>
-          <li><Link to="/partners" onClick={closeMenu}>Parcerias</Link></li>
+        {/* Links */}
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/" onClick={() => setIsOpen(false)}>Página Inicial</Link>
+          </li>
+          <li>
+            <Link to="/courses" onClick={() => setIsOpen(false)}>Cursos</Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={() => setIsOpen(false)}>Quem Somos</Link>
+          </li>
+          <li>
+            <Link to="/partners" onClick={() => setIsOpen(false)}>Parcerias</Link>
+          </li>
         </ul>
+        
+        {/* Botão de tema */}
+        <div className="theme-toggle" onClick={toggleTheme}>
+          <div className={`theme-slider ${isDarkMode ? "dark" : "light"}`}>
+            <img
+              src={isDarkMode ? moonIcon : sunIcon}
+              alt={isDarkMode ? "Modo escuro" : "Modo claro"}
+              className="theme-icon"
+            />
+          </div>
+        </div>
 
-        {/* Botão de hambúrguer para dispositivos móveis */}
-        <button
-          className="nav-toggle"
-          onClick={toggleMenu}
-        >
-          <span className="nav-icon"></span>
+
+
+        {/* Botão de hambúrguer */}
+        <button className="nav-toggle" onClick={toggleMenu}>
+          <span className={`nav-icon ${isOpen ? "open" : ""}`}></span>
         </button>
       </nav>
     </header>

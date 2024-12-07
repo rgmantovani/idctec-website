@@ -1,4 +1,3 @@
-/* src/pages/AboutPage/AboutPage.css */
 .about-page {
     background-color: #f4f4f9;
     padding: 40px;
@@ -6,13 +5,13 @@
   }
   
   .about-page h1 {
-    color: #1E3A8A; /* Azul escuro */
+    color: #1E3A8A; 
     font-size: 2.5rem;
   }
   
   .about-page p {
     font-size: 1.2rem;
-    color: #4b5563; /* Cinza escuro */
+    color: #4b5563; 
     line-height: 1.6;
     margin-top: 20px;
   }

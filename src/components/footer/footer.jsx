@@ -11,8 +11,8 @@ const Footer = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log("E-mail enviado:", email); // Aqui você pode substituir pela lógica desejada.
-        setEmail(""); // Limpa o campo após o envio.
+        console.log("E-mail enviado:", email); 
+        setEmail(""); 
     };
 
     return (

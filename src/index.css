@@ -10,59 +10,141 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Tema escuro */
+body.dark-mode {
+  background-color: #4e4a4a; /* Cor de fundo escura mais suave */
+  color: #e0e0e0; /* Texto claro */
+}
+
+/* Código fonte */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* Container principal */
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Conteúdo */
 .content {
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f9; /* Cor de fundo suave para o conteúdo */
+  background-color: #f4f4f9; /* Cor de fundo clara (para o tema claro) */
+  transition: background-color 0.3s ease;
 }
 
-/* Estilos específicos para a section com a classe .bg-white */
+/* Modo escuro - Conteúdo */
+body.dark-mode .content {
+  background-color: #434343; /* Fundo escuro mais suave no conteúdo */
+}
+
+/* Estilos para a section com fundo branco */
 section {
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; /* Cor de fundo branca */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  border-radius: 8px; /* Bordas arredondadas */
-  padding: 20px; /* Padding confortável */
-  margin: 20px auto; /* Margem para centralizar */
-  max-width: 800px; /* Largura máxima */
-  width: 90%; /* Largura adaptável */
-  font-size: 1rem; /* Tamanho da fonte */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 90%;
+  font-size: 1rem;
   color: #4A4A4A; /* Cor do texto */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilos para o parágrafo dentro da section */
+/* Modo escuro - Section */
+body.dark-mode section {
+  background-color: #3a3a3a; /* Fundo escuro suave para a section */
+  color: #e0e0e0; /* Texto claro */
+}
+
 section p {
-  color: #4A4A4A; /* Cor do texto */
-  line-height: 1.6; /* Espaçamento entre linhas */
-  font-size: 1.125rem; /* Tamanho da fonte um pouco maior para leitura */
-  text-align: justify; /* Justificar o texto */
+  color: #4A4A4A;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  text-align: justify;
+  transition: color 0.3s ease;
+}
+
+/* Modo escuro - Parágrafo */
+body.dark-mode section p {
+  color: #e0e0e0; /* Texto claro no tema escuro */
 }
 
 /* Ajustes de hover (opcional) */
 section p:hover {
-  color: #1E3A8A; /* Cor ao passar o mouse */
+  color: #1E3A8A;
   cursor: pointer;
 }
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   section {
-    padding: 15px; /* Reduzindo o padding em telas menores */
-    margin: 15px; /* Margem reduzida */
+    padding: 15px;
+    margin: 15px;
   }
 
   section p {
-    font-size: 1rem; /* Ajustando o tamanho da fonte */
+    font-size: 1rem;
   }
+}
+
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #bbb;
+}
+
+.theme-slider {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle .theme-slider.light {
+  transform: translateX(5px);
+  background-color: #ffd700; /* Cor do sol */
+}
+
+.theme-toggle .theme-slider.dark {
+  transform: translateX(25px);
+  background-color: #1e3a8a; /* Cor da lua */
+}
+
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #fff;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #555; /* Cor de fundo do botão no tema escuro */
+}
+
+body.dark-mode .theme-toggle .theme-slider.dark {
+  background-color: #ffd700; /* Cor do slider no tema escuro */
 }

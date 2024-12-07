@@ -1,17 +1,17 @@
 /* Geral da Navbar */
 .nav-container {
-  background-color: #1e3a8a; /* Cor de fundo */
+  background-color: #1e3a8a;
   color: white;
-  padding: 15px 20px; /* Maior espaçamento para melhorar o visual */
+  padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte para maior profundidade */
-  transition: background-color 0.3s ease; /* Transição suave de fundo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 .nav-container:hover {
-  background-color: #1e3a8a; /* Cor de fundo suavemente escurecida ao passar o mouse */
+  background-color: #162d6b;
 }
 
 /* Container da Navbar */
@@ -25,26 +25,26 @@
 
 /* Logo */
 .nav-logo {
-  font-size: 1.75rem; /* Logo maior */
+  font-size: 1.75rem;
   font-weight: bold;
   color: white;
-  letter-spacing: 2px; /* Espaçamento entre as letras */
+  letter-spacing: 2px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .nav-logo .highlight {
-  color: #ff9800; /* Cor de destaque no logo */
+  color: #ff9800;
 }
 
 .nav-logo:hover {
-  color: #ff4081; /* Mudança de cor ao passar o mouse */
+  color: #ff4081;
 }
 
 /* Links */
 .nav-links {
   display: flex;
-  gap: 25px; /* Aumento do espaço entre os links */
+  gap: 25px;
   list-style: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -53,15 +53,73 @@
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  padding: 5px 15px; /* Mais espaçamento nos links */
+  padding: 5px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff4081; /* Cor vibrante ao passar o mouse */
+  color: #ff4081;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px; /* Arredondamento maior nos links */
+  border-radius: 10px;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+/* Esconde o botão deslizante amarelo */
+.theme-slider {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd; /* Mantém a cor do fundo invisível */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 0; /* Coloca atrás das imagens */
+}
+
+/* Imagens do botão de tema */
+.theme-icon img {
+  width: 24px;  /* Aumento o tamanho da imagem para 24px */
+  height: 24px; /* Aumento o tamanho da imagem para 24px */
+  object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+  z-index: 1; /* Coloca a imagem acima do botão deslizante */
+}
+
+/* Posicionamento das imagens no botão */
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Centraliza as imagens tanto vertical quanto horizontalmente */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+/* Posiciona a imagem do sol e lua dentro do botão */
+.theme-icon.sun {
+  position: absolute;
+  left: 5px; /* Sol fixo à esquerda */
+}
+
+.theme-icon.moon {
+  position: absolute;
+  right: 5px; /* Lua fixo à direita */
 }
 
 /* Botão de hambúrguer */
@@ -70,11 +128,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  position: relative; /* Para permitir o posicionamento do X dentro do botão */
+  position: relative;
 }
 
 .nav-icon {
-  width: 30px; /* Ícone maior */
+  width: 30px;
   height: 4px;
   background-color: white;
   position: relative;
@@ -84,7 +142,7 @@
 .nav-icon::before,
 .nav-icon::after {
   content: "";
-  width: 30px; /* Aumentando o tamanho */
+  width: 30px;
   height: 4px;
   background-color: white;
   position: absolute;
@@ -100,18 +158,17 @@
   top: 8px;
 }
 
-/* Quando o menu está aberto, transforma as barras em um X */
 .nav-icon.open {
   background-color: transparent;
 }
 
 .nav-icon.open::before {
-  transform: rotate(45deg); /* Rotaciona a barra superior */
+  transform: rotate(45deg);
   top: 0;
 }
 
 .nav-icon.open::after {
-  transform: rotate(-45deg); /* Rotaciona a barra inferior */
+  transform: rotate(-45deg);
   top: 0;
 }
 
@@ -140,33 +197,33 @@
 
   .nav-toggle {
     display: block;
+    margin-right: 20px; /* Ajuste a margem à direita para afastar o ícone */
   }
 
   .nav-icon {
-    width: 25px; /* Ícone do hambúrguer menor */
+    width: 25px;
     height: 3px;
   }
 
   .nav-icon::before,
   .nav-icon::after {
-    width: 25px; /* Ícones menores */
+    width: 25px;
     height: 3px;
   }
 
-  /* Ajustes no Menu de Hambúrguer */
   .nav-links {
-    width: 80%; /* Reduzindo a largura do menu */
-    margin: 0 auto; /* Centralizando o menu */
-    padding-top: 20px; /* Ajustando o espaçamento superior */
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
   }
 
   .nav-links a {
-    font-size: 1rem; /* Tamanho de fonte ajustado para o menu no hambúrguer */
-    padding: 12px 20px; /* Maior padding para tornar os itens mais fáceis de clicar */
+    font-size: 1rem;
+    padding: 12px 20px;
   }
 
   .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Maior destaque ao passar o mouse */
-    border-radius: 8px; /* Border-radius para links */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
   }
 }
