@@ -76,8 +76,12 @@ const CoursesPage = () => {
             </div>
           </div>
         </div>
+
+        
+
       ))}
     </div>
+    
   );
 };
 

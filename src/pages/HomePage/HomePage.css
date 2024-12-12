@@ -1,0 +1,117 @@
+.name_apresentation {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Alterar se precisar */
+    gap: 16px;
+
+}
+
+.logo .idctec {
+    font-size: 128px;
+    color: #0A2540; /* Cor do texto principal */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #0A2540; /* Cor do texto subtítulo */
+    border-left: 2px solid #0A2540; /* Barra vertical */
+    padding-left: 16px;
+    line-height: 1.5;
+}
+
+.foto_explain{
+    position: relative;
+    height: 100vh; /* Altura da seção igual à altura da tela */
+    background-image: url('./images/utfpr1.png'); /* Substitua pelo caminho da imagem */
+    background-size: cover; /* Cobre todo o espaço disponível */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo no meio da seção */
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do bloco */
+    max-width: 600px; /* Largura máxima do texto */
+    text-align: justify; /* Justifica o texto */
+    margin-left: 600px;
+}
+
+
+.materiais {
+    display: flex;
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 100px;
+}
+
+.card_materiais {
+    background-color: #ccc; /* Cor do fundo do card */
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center;
+}
+
+
+.icon img {
+    width: 100px; /* Tamanho do ícone */
+    height: 100px;
+    object-fit: contain;
+    opacity: 0.8; /* Transparência do ícone */
+}
+
+
+.parceiros {
+    display: flex;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.card_parceiros {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    background-color: #d6d6d6; /* Cor do círculo */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 20px;
+}
+
