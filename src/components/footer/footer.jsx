@@ -11,8 +11,8 @@ const Footer = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log("E-mail enviado:", email); // Aqui você pode substituir pela lógica desejada.
-        setEmail(""); // Limpa o campo após o envio.
+        console.log("E-mail enviado:", email); 
+        setEmail(""); 
     };
 
     return (
@@ -36,22 +36,15 @@ const Footer = () => {
                     </button>
                 </form>
             </div>
-            <div className={styles.links}>
-                <ul>
-                    <li>Página Inicial</li>
-                    <li>Cursos</li>
-                    <li>Quem Somos / Sobre</li>
-                    <li>Parcerias</li>
-                </ul>
-            </div>
             <div className={styles.social}>
                 <div className={styles.icons}>
-                    <i className="fab fa-facebook"></i>
+                    {/* <i className="fab fa-facebook"></i>
                     <i className="fab fa-twitter"></i>
                     <i className="fab fa-youtube"></i>
-                    <i className="fas fa-rss"></i>
+                    <i className="fas fa-rss"></i> */}
                 </div>
-                <span>© 2024. Criado pela turma de oficina de integração 2 - 2/24</span>
+                {/* © 2024. Criado pela turma de oficina de integração 2 - 2/24 */}
+                <span>2024. Criado pela turma de oficina de integração 2 - 2/24</span>
             </div>
         </footer>
     );

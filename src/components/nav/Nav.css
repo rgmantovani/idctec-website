@@ -1,0 +1,242 @@
+/* Geral da Navbar */
+.nav-container {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.nav-container:hover {
+  background-color: #162d6b;
+}
+
+/* Container da Navbar */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-img {
+  width: 80px; /*Tamanho do ícone*/
+  height: 80px;
+  object-fit:contain;
+  position: relative;
+  /* opacity: 0.8; Transparência do ícone */
+  /* color: #fff; */
+  /* width: 1%; */
+  display:flex;
+  /* justify-content: space-between; */
+  /* padding: 0 5px; */
+}
+
+.nav-logo .highlight {
+  color: #ff9800;
+}
+
+.nav-logo:hover {
+  color: #ff4081;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+/* Esconde o botão deslizante amarelo */
+.theme-slider {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd; /* Mantém a cor do fundo invisível */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 0; /* Coloca atrás das imagens */
+}
+
+/* Imagens do botão de tema */
+.theme-icon img {
+  width: 24px;  /* Aumento o tamanho da imagem para 24px */
+  height: 24px; /* Aumento o tamanho da imagem para 24px */
+  object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+  z-index: 1; /* Coloca a imagem acima do botão deslizante */
+}
+
+/* Posicionamento das imagens no botão */
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Centraliza as imagens tanto vertical quanto horizontalmente */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+/* Posiciona a imagem do sol e lua dentro do botão */
+.theme-icon.sun {
+  position: absolute;
+  left: 5px; /* Sol fixo à esquerda */
+}
+
+.theme-icon.moon {
+  position: absolute;
+  right: 5px; /* Lua fixo à direita */
+}
+
+/* Botão de hambúrguer */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-icon::before {
+  top: -8px;
+}
+
+.nav-icon::after {
+  top: 8px;
+}
+
+.nav-icon.open {
+  background-color: transparent;
+}
+
+.nav-icon.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-icon.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Responsivo: Menu de Hambúrguer */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1e3a8a;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-right: 20px; /* Ajuste a margem à direita para afastar o ícone */
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 3px;
+  }
+
+  .nav-icon::before,
+  .nav-icon::after {
+    width: 25px;
+    height: 3px;
+  }
+
+  .nav-links {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+}
