@@ -26,42 +26,43 @@ const HomePage = () => {
               </p>
           </div>
         </div>
-
-        <div class="materiais">
-          <div class="card_materiais">
-              <div class="icon">
-                  <img src="images/WIP.png" alt="Material Icon"/> 
-              </div>
-              <div class="title">Material 2</div>
+        <div class="content_box">
+          <div class="materiais">
+            <div class="card_materiais">
+                <div class="icon">
+                    <img src="images/WIP.png" alt="Material Icon"/> 
+                </div>
+                <div class="title">Material 2</div>
+            </div>
+            <div class="card_materiais">
+                <div class="icon">
+                    <img src="images/WIP.png" alt="Material Icon"/>
+                </div>
+                <div class="title">Material 1</div>
+            </div>
           </div>
-          <div class="card_materiais">
-              <div class="icon">
-                  <img src="images/WIP.png" alt="Material Icon"/>
-              </div>
-              <div class="title">Material 1</div>
+
+          <div class="parceiros">
+          <div class="card_parceiros">
+              <div class="circle"></div>
+              <h3>Heading</h3>
+              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+              <button>View details »</button>
           </div>
-        </div>
+          <div class="card_parceiros">
+              <div class="circle"></div>
+              <h3>Heading</h3>
+              <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+              <button>View details »</button>
+          </div>
+          <div class="card_parceiros">
+              <div class="circle"></div>
+              <h3>Heading</h3>
+              <p>And lastly this, the third column of representative placeholder content.</p>
+              <button>View details »</button>
+          </div>
 
-        <div class="parceiros">
-        <div class="card_parceiros">
-            <div class="circle"></div>
-            <h3>Heading</h3>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <button>View details »</button>
-        </div>
-        <div class="card_parceiros">
-            <div class="circle"></div>
-            <h3>Heading</h3>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <button>View details »</button>
-        </div>
-        <div class="card_parceiros">
-            <div class="circle"></div>
-            <h3>Heading</h3>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <button>View details »</button>
-        </div>
-
+          </div>
         </div>
 
       </body>

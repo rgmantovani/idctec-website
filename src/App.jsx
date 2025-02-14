@@ -40,7 +40,7 @@ function App() {
         </Routes>
       </div>
       {/* Rodapé */}
-      <Footer />
+      <Footer />  
     </Router>
   );
 }
