@@ -41,7 +41,7 @@ const CoursesPage = () => {
           ? { ...course, views: course.views + 1 }
           : course
       );
-      localStorage.setItem('courseViews', JSON.stringify(updatedCourses)); // Salva as visualizações
+      localStorage.setItem('courseViews', JSON.stringify(updatedCourses));
       return updatedCourses;
     });
 
@@ -49,39 +49,45 @@ const CoursesPage = () => {
   };
 
   return (
-    <div className="courses-container">
-      {courseViews.map((course) => (
-        <div
-          key={course.id}
-          className="course-card"
-          onClick={() => handleClickCourse(course.id)}
-        >
-          <div className="course-image">
-            {course.image ? (
-              <img src={course.image} alt={course.title} />
-            ) : (
-              <div className="placeholder-icon">
-                <span>📘</span>
-              </div>
-            )}
-          </div>
+    <div className="courses-page">
+      <div className="name_apresentation">
+        <div className="logo">
+          <span className="idctec">IDC<b>TEC</b></span>
+        </div>
+        <div className="subtitle">
+          <span>Integração Digital e <br/> Capacitação Tecnológica</span>
+        </div>
+      </div>
+      <div className="courses-container">
+        {courseViews.map((course) => (
+          <div
+            key={course.id}
+            className="course-card"
+            onClick={() => handleClickCourse(course.id)}
+          >
+            <div className="course-image">
+              {course.image ? (
+                <img src={course.image} alt={course.title} />
+              ) : (
+                <div className="placeholder-icon">
+                  <span>📘</span>
+                </div>
+              )}
+            </div>
 
-          <div className="course-info">
-            <h2 className="course-title">{course.title}</h2>
-            <p className="course-description">{course.description}</p>
-            <p className="course-author">{course.author}</p>
-            <div className="course-stats">
-              <span>{course.views} visualizações</span>
-              <span>{course.time}</span>
+            <div className="course-info">
+              <h2 className="course-title">{course.title}</h2>
+              <p className="course-description">{course.description}</p>
+              <p className="course-author">{course.author}</p>
+              <div className="course-stats">
+                <span>{course.views} visualizações</span>
+                <span>{course.date}</span>
+              </div>
             </div>
           </div>
-        </div>
-
-        
-
-      ))}
+        ))}
+      </div>
     </div>
-    
   );
 };
 

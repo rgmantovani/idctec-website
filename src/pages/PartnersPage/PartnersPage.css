@@ -1,0 +1,118 @@
+/* Contêiner principal para os cursos */
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que os itens se ajustem para a próxima linha, caso não caibam em uma única linha */
+  justify-content: center; /* Centraliza os cartões */
+  gap: 20px;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Cartão de cada curso */
+.partner-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 30%; /* Garante que os cartões fiquem lado a lado em telas maiores */
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Padrão, em telas grandes, o cartão é empilhado */
+  justify-content: space-between;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para a imagem do curso */
+.partner-image {
+  height: 180px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-icon {
+  font-size: 50px;
+}
+
+/* Informações do curso */
+.partner-info {
+  padding: 15px 0;
+}
+
+.partner-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.partner-description {
+  color: #777;
+  margin: 10px 0;
+}
+
+.partner-author {
+  font-size: 14px;
+  color: #555;
+}
+
+.partner-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsivo: Ajusta o layout para telas pequenas */
+@media (max-width: 1024px) {
+  .partner-card {
+    width: 45%; /* Em telas médias, dois cartões por linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-card {
+    width: 100%; /* Em telas pequenas, um cartão por linha */
+    max-width: 100%; /* Remove o limite de largura máxima */
+    margin-bottom: 20px; /* Adiciona um espaço entre os cartões */
+    flex-direction: row; /* Alinha os itens na horizontal (imagem à esquerda e texto à direita) */
+    padding: 10px;
+  }
+
+  /* Estilo para a imagem à esquerda em telas pequenas */
+  .partner-image {
+    height: 100px; /* Reduz a altura da imagem */
+    width: 40%; /* A imagem ocupa 40% da largura do cartão */
+    margin-right: 15px; /* Adiciona um espaço entre a imagem e o texto */
+  }
+
+  .partner-info {
+    width: 60%; /* O texto ocupa os 60% restantes */
+  }
+
+  .partner-title {
+    font-size: 18px;
+  }
+
+  .partner-description {
+    font-size: 14px;
+  }
+
+  .partner-author {
+    font-size: 12px;
+  }
+
+  .partner-stats {
+    font-size: 10px;
+  }
+}
