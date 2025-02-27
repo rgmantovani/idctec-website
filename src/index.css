@@ -15,7 +15,7 @@ body {
 
 /* Tema escuro */
 body.dark-mode {
-  background-color: #4e4a4a; /* Cor de fundo escura mais suave */
+  background-color: #3a3a3a; /* Cor de fundo escura mais suave */
   color: #e0e0e0; /* Texto claro */
 }
 
@@ -41,7 +41,62 @@ code {
 
 /* Modo escuro - Conteúdo */
 body.dark-mode .content {
-  background-color: #434343; /* Fundo escuro mais suave no conteúdo */
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+}
+
+body.dark-mode .nav-container{
+  background-color: #1d1d1d; /* Fundo escuro mais suave no conteúdo */
+}
+
+body.dark-mode footer{
+  background-color: #1d1d1d; /* Fundo escuro mais suave no conteúdo */
+}
+
+body.dark-mode .subtitle {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  border-left: 2px solid #e0e0e0;
+  color: #e0e0e0;
+}
+
+body.dark-mode .about-card {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .course-card {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .course-image {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .about-image {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .idctec {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .partner-card {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+body.dark-mode .partner-image {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
+}
+
+
+body.dark-mode .idctec {
+  background-color: #3a3a3a; /* Fundo escuro mais suave no conteúdo */
+  color: #e0e0e0;
 }
 
 /* Estilos para a section com fundo branco */
@@ -54,7 +109,7 @@ section {
   max-width: 800px;
   width: 90%;
   font-size: 1rem;
-  color: #4A4A4A; /* Cor do texto */
+  color: #3a3a3a; /* Cor do texto */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -73,9 +128,42 @@ section p {
 }
 
 /* Modo escuro - Parágrafo */
-body.dark-mode section p {
+body.dark-mode p {
+  background-color: #3a3a3a;
   color: #e0e0e0; /* Texto claro no tema escuro */
 }
+
+body.dark-mode .content_box {
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
+body.dark-mode .text-box {
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
+
+body.dark-mode .link_materiais{
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
+body.dark-mode .card_materiais {
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
+body.dark-mode .card_parceiros {
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
+body.dark-mode .name_apresentation {
+  background-color: #3a3a3a;
+  color: #e0e0e0; /* Texto claro no tema escuro */
+}
+
 
 /* Ajustes de hover (opcional) */
 section p:hover {

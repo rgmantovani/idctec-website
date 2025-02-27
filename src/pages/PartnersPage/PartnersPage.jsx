@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PartnersPage.css";
+import doc1 from "../HomePage/images/EDHUCCA.png";
 
 const partners = [
   {
     id: 1,
     title: "EDHUCCA",
     description: "A Escola de Desenvolvimento Humano Casa do Caminho (EDHUCCA) é uma instituição sem fins lucrativos localizada em Apucarana, Paraná. Fundada em 24 de junho de 2001, a EDHUCCA atua na área de assistência e serviços sociais, oferecendo acompanhamento psicossocial e oficinas de capacitação, como o programa Jovem Aprendiz. Seu objetivo principal é fortalecer vínculos e promover o desenvolvimento humano de crianças e adolescentes em situação de vulnerabilidade social.",
-    author: "Lucas Prado",
+    author: "IDCTEC",
     views: 5,
     date: "há 21 horas",
-    image: "",
+    image: doc1,
   },
   // {
   //   id: 2,
