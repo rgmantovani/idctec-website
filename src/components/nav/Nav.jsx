@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import sunIcon from '../assets/sun-icon.png';
 import moonIcon from '../assets/moon-icon.png';
-import img_branco from './images/IDCTEC_logo-branco.png';
-import img_preto from './images/IDCTEC_logo-preto.png';
+
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false); // Controle do menu hambúrguer
@@ -28,15 +27,8 @@ const Nav = () => {
     <header className="nav-container">
       <nav className="nav-content">
         {/* Logo */}
-        {/* <div className="nav-logo">IDCTEC</div> */}
-        <div className={`icon-img ${isDarkMode ? "dark" : "light"}`}>
-          <img
-            src={isDarkMode ? img_preto : img_branco}
-            alt={isDarkMode ? "Logo modo escuro" : "Logo modo claro"}>
-          </img>
-        
-        
-        </div>
+        <div className="nav-logo">IDCTEC</div>
+
         {/* Links */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>

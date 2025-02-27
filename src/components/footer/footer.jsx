@@ -38,13 +38,12 @@ const Footer = () => {
             </div>
             <div className={styles.social}>
                 <div className={styles.icons}>
-                    {/* <i className="fab fa-facebook"></i>
+                    <i className="fab fa-facebook"></i>
                     <i className="fab fa-twitter"></i>
                     <i className="fab fa-youtube"></i>
-                    <i className="fas fa-rss"></i> */}
+                    <i className="fas fa-rss"></i>
                 </div>
-                {/* © 2024. Criado pela turma de oficina de integração 2 - 2/24 */}
-                <span>2024. Criado pela turma de oficina de integração 2 - 2/24</span>
+                <span>© 2024. Criado pela turma de oficina de integração 2 - 2/24</span>
             </div>
         </footer>
     );

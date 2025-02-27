@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.css";
-import edhucca_logo from "./images/EDHUCCA.png";
+import imgCurso1 from "./images/curso1.png"
+import imgEDHUCCA from "./images/edhucca-parceiro.png"
 
 const HomePage = () => {
   return (
@@ -20,58 +21,53 @@ const HomePage = () => {
         <div class="foto_explain">
           <div class="text-box">
               <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat maximus venenatis. 
-                  Etiam dolor elit, iaculis non pretium ut, finibus non massa. Class aptent taciti sociosqu 
-                  ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fermentum sollicitudin 
-                  dui et dapibus. Curabitur tincidunt purus aliquam nisl tristique suscipit. 
+              Nós somos o projeto extensionista IDCTec, vulgo Inclusão Digital e Capacitação Tecnológica. 
+              Oriundos da UTFPR, campus Apucarana, nosso objetivo sempre foi proporcionar uma educação de qualidade, capacitando nossos alunos no caminho da Informática. 
               </p>
           </div>
         </div>
+        <div class="content_box">
+          <div class="materiais">
+            {/* <div class="card_materiais">
+                <div class="icon">
+                    <img src="images/WIP.png" alt="Material Icon"/> 
+                </div>
+                <div class="title">Material 2</div>
+            </div> */}
+            <div class="card_materiais">
+                <div class="icon">
+                    <img src={imgCurso1} alt="Material Icon"/>
+                </div>
+                <div class="title">Material 1</div>
+                <a href="./public/Material1.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF</a>
+                <a href="./public/Material1.pdf" download="Material1.pdf">Baixar PDF</a>
 
-        <div class="materiais">
-          <div class="card_materiais">
-            <div class="icon">
-              {/* <img src="images/WIP.png" alt="Material Icon"/> */}
-              <div className="placeholder-icon-home">{/* Improviso */}
-                <span>📘</span>
-              </div>
             </div>
-            <div class="title">Material 1</div>
           </div>
-          <div class="card_materiais">
-            <div class="icon">
-              {/* <img src="images/WIP.png" alt="Material Icon"/> */}
-              <div className="placeholder-icon-home"> {/* Improviso */}
-                <span>📘</span>
+
+          <div class="parceiros">
+          <div class="card_parceiros">
+              <div class="circle">
+                <img src={imgEDHUCCA} alt="Parceiro EDHUCCA" />
               </div>
-            </div>
-            <div class="title">Material 2</div>
+              <h3>EDHUCCA</h3>
+              <p>A Escola de Desenvolvimento Humano Casa do Caminho (EDHUCCA) é uma instituição sem fins lucrativos localizada em Apucarana, Paraná.</p>
+              <button>View details »</button>
           </div>
-        </div>
+          {/* <div class="card_parceiros">
+              <div class="circle"></div>
+              <h3>Heading</h3>
+              <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+              <button>View details »</button>
+          </div>
+          <div class="card_parceiros">
+              <div class="circle"></div>
+              <h3>Heading</h3>
+              <p>And lastly this, the third column of representative placeholder content.</p>
+              <button>View details »</button>
+          </div> */}
 
-        <div class="parceiros">
-        <div class="card_parceiros">
-            <div class="circle">
-              <img src={edhucca_logo}></img>
-            </div>
-            <h3>EDHUCCA</h3>
-            <p>A Escola de desenvolvimento Humano "Casa do Caminho" é um dos principais parceiros desse projeto, 
-              fornecendo oportunidades para a capacitação daqueles que não teriam outra oportunidade.</p>
-            <button>View details »</button>
-        </div>
-        {/* <div class="card_parceiros">
-            <div class="circle"></div>
-            <h3>Heading</h3>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <button>View details »</button>
-        </div>
-        <div class="card_parceiros">
-            <div class="circle"></div>
-            <h3>Heading</h3>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <button>View details »</button>
-        </div> */}
-
+          </div>
         </div>
 
       </body>

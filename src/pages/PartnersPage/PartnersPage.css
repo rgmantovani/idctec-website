@@ -1,5 +1,5 @@
 /* Contêiner principal para os cursos */
-.AboutP-container {
+.partners-container {
   display: flex;
   flex-wrap: wrap;  /* Permite que os itens se ajustem para a próxima linha, caso não caibam em uma única linha */
   justify-content: center; /* Centraliza os cartões */
@@ -8,8 +8,8 @@
   padding: 20px;
 }
 
-/* Cartão de cada*/
-.about-card {
+/* Cartão de cada curso */
+.partner-card {
   background-color: #fff;
   border-radius: 8px;
   width: 30%; /* Garante que os cartões fiquem lado a lado em telas maiores */
@@ -23,46 +23,23 @@
   justify-content: space-between;
 }
 
-.about-card:hover {
+.partner-card:hover {
   transform: translateY(-5px);
 }
 
 /* Estilo para a imagem do curso */
-.about-image {
+.partner-image {
+  height: 180px;
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fullText {
-  display: none; /* Esconde o texto completo inicialmente */
-}
-
-
-.about-label {
-  display: flex;
-  align-items: center; /* Alinha verticalmente os itens no centro */
-  justify-content: space-between; /* Distribui espaço igual entre os itens */
-  gap: 20px; /* Espaço entre os itens */
-}
-
-.about-info {
-  flex: 1; /* Faz cada seção ocupar metade do espaço */
-  margin: 12px 40px; /* Adiciona uma margem interna para espaçamento */
-}
-
-.about-info-image {
-  flex: 1;
-  margin: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-info-image img{
-  width: auto;
-  height: 50%;
+.partner-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .placeholder-icon {
@@ -70,26 +47,26 @@
 }
 
 /* Informações do curso */
-.about-info {
+.partner-info {
   padding: 15px 0;
 }
 
-.about-title {
+.partner-title {
   font-size: 20px;
   font-weight: bold;
 }
 
-.about-description {
+.partner-description {
   color: #777;
   margin: 10px 0;
 }
 
-.about-author {
+.partner-author {
   font-size: 14px;
   color: #555;
 }
 
-.about-stats {
+.partner-stats {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
@@ -98,13 +75,13 @@
 
 /* Responsivo: Ajusta o layout para telas pequenas */
 @media (max-width: 1024px) {
-  .about-card {
+  .partner-card {
     width: 45%; /* Em telas médias, dois cartões por linha */
   }
 }
 
 @media (max-width: 768px) {
-  .about-card {
+  .partner-card {
     width: 100%; /* Em telas pequenas, um cartão por linha */
     max-width: 100%; /* Remove o limite de largura máxima */
     margin-bottom: 20px; /* Adiciona um espaço entre os cartões */
@@ -113,29 +90,29 @@
   }
 
   /* Estilo para a imagem à esquerda em telas pequenas */
-  .about-image {
+  .partner-image {
     height: 100px; /* Reduz a altura da imagem */
     width: 40%; /* A imagem ocupa 40% da largura do cartão */
     margin-right: 15px; /* Adiciona um espaço entre a imagem e o texto */
   }
 
-  .about-info {
+  .partner-info {
     width: 60%; /* O texto ocupa os 60% restantes */
   }
 
-  .about-title {
+  .partner-title {
     font-size: 18px;
   }
 
-  .about-description {
+  .partner-description {
     font-size: 14px;
   }
 
-  .about-author {
+  .partner-author {
     font-size: 12px;
   }
 
-  .about-stats {
+  .partner-stats {
     font-size: 10px;
   }
 }
