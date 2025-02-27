@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage.css";
-import imgGroup from "./images/grupo.png"
+import imgGroup from "./images/quemsomos.png"
 
 const AboutP = [
   {

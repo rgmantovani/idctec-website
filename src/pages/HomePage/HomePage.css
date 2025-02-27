@@ -130,3 +130,40 @@ p {
     gap: 100px;
     margin: 50px auto;
 }
+
+.course-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+  
+  .course-links a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .view-pdf {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+  }
+  
+  .view-pdf:hover {
+    background-color: white;
+    color: #007bff;
+  }
+  
+  .download-pdf {
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+  }
+  
+  .download-pdf:hover {
+    background-color: white;
+    color: #28a745;
+  }
